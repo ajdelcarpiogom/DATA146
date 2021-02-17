@@ -1,0 +1,7 @@
+# Project 1
+
+### Package - A namespace that organizes a set of related classes and interfaces. It's very similar to different folders on your computer.
+### Library - Contains data types that would normally be considered part of the “core” of a language, such as numbers and lists.
+
+### In order to install a package and make it accessible to my workspace in Python, we must:
+  ###
