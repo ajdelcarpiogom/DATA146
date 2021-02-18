@@ -33,19 +33,19 @@
   
 ### Other terminology for a row and a column can be "tuple".
 
-```file = open("gapminder.tsv")
-readf = pd.read_csv(file, delimiter = "\t")
-readf = pd.DataFrame(readf)
-readf["year"].min()
-### 1952
-readf["year"].max()
-### 2007
-readf["year"]```
+### file = open("gapminder.tsv")
+### readf = pd.read_csv(file, delimiter = "\t")
+### readf = pd.DataFrame(readf)
+### readf["year"].min()
+  ### 1952
+### readf["year"].max()
+  ### 2007
+### readf["year"]```
 
 ### The intervals are 5 years in the gapminder.tsv file.
 ### I would add 2012 and 2017 to the raw data.
 
-```readf.loc[readf["year"] == 1952].count()```
+readf.loc[readf["year"] == 1952].count()
 
 ### Here we see that 142 outcomes are in every year, so adding these two years would output 284 more outcomes.
 
