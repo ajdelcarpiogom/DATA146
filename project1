@@ -33,11 +33,50 @@
   
 ### Other terminology for a row and a column can be "tuple".
 
+''' file = open("gapminder.tsv")
+readf = pd.read_csv(file, delimiter = "\t")
+readf = pd.DataFrame(readf)
+readf["year"].min()
+### 1952
+readf["year"].max()
+### 2007
+readf["year"] '''
 
+### The intervals are 5 years in the gapminder.tsv file.
+### I would add 2012 and 2017 to the raw data.
 
+''' readf.loc[readf["year"] == 1952].count() '''
+
+### Here we see that 142 outcomes are in every year, so adding these two years would output 284 more outcomes.
+
+### Below, the results show that Rwanda had the lowest life expectancy in 1992. The health quality of Rwanda has been relatively low as well as the maternal mortality ratio due to poverty, poor roads rural areas, and misleading traditional beliefs and inadequate knowledge on pregnancy related issues.
+  ### 23.599
+readf["country"].loc[readf["lifeExp"] == 23.599]
+readf["year"].loc[readf["lifeExp"] == 23.599] '''
 
 
 
 
 
 ### .iloc gets rows (or columns) at particular positions in the index (so it only takes integers) whereas .loc gets rows (or columns) with particular labels from the index.
+
+### Describe how an api works#####
+
+### The function .apply() takes a function as an input and applies this function to an entire DataFrame. It serves as an alternative to using a loop to iterate over a the entire DataFrame making it easier and ensuring that it was applied to the whole df. 
+
+### Instead of using .iloc, we can use other approaches in order to select, filter and assign a subset number of variables to a new data frame by:
+### Selecting a single or multiple columns by label
+  ### df.[string]
+  ### df.[list of strings]
+### Selecting a single or multiple rows by label
+  ### df.loc[string]
+  ### df.loc[list of strings]
+### Select a single row by position
+  ### df.iloc[integer]
+  ### df.iloc[list of integers]
+### Selecting rows and columns simultaneously
+  ### df.loc[row_labels, col_labels]
+  ### df.iloc[row_pos, col_pos]
+  
+  
+  
